@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="3.2" jmeter="3.2 r1790748">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="测试计划" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="线程组" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1502035342000</longProp>
+        <longProp name="ThreadGroup.end_time">1502035342000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP请求" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="projectId" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">747</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">projectId</stringProp>
+              </elementProp>
+              <elementProp name="taskId" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">165143</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">taskId</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">test.teamin.cc</stringProp>
+          <stringProp name="HTTPSampler.port">80</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">task/getTaskDetailsPackageById</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+          <collectionProp name="Asserion.test_strings">
+            <stringProp name="1204948360">{&quot;data&quot;:{&quot;attachList&quot;:[],&quot;notInSubLinkList&quot;:null,&quot;readOnly&quot;:false,&quot;repeatTask&quot;:null,&quot;taskDetails&quot;:{&quot;allPretask&quot;:[],&quot;allSubTask&quot;:null,&quot;archive&quot;:0,&quot;arg1&quot;:null,&quot;assignerIcon&quot;:&quot;#FF6E23&quot;,&quot;assignerId&quot;:&quot;55070&quot;,&quot;assignerName&quot;:&quot;老鱼&quot;,&quot;atProjectSerial&quot;:&quot;&quot;,&quot;attentionCount&quot;:0,&quot;canUpdateTaskItem&quot;:{&quot;isall&quot;:1},&quot;endTime&quot;:&quot;&quot;,&quot;fathertaskId&quot;:&quot;&quot;,&quot;fathertaskName&quot;:&quot;&quot;,&quot;formatPlantime&quot;:null,&quot;funtrue&quot;:0,&quot;gtdGroupName&quot;:&quot;&quot;,&quot;gtdGroupType&quot;:0,&quot;isCollector&quot;:0,&quot;isShowStartTime&quot;:0,&quot;isShowTime&quot;:0,&quot;labels&quot;:[],&quot;myAttention&quot;:0,&quot;notRead&quot;:0,&quot;organizationSerialNum&quot;:0,&quot;planFinishTime&quot;:null,&quot;preTaskName&quot;:&quot;&quot;,&quot;pretaskId&quot;:0,&quot;privated&quot;:0,&quot;projectArchive&quot;:0,&quot;projectIcon&quot;:&quot;&quot;,&quot;projectId&quot;:&quot;&quot;,&quot;projectName&quot;:&quot;&quot;,&quot;projectStateColumnIcon&quot;:&quot;&quot;,&quot;projectStateColumnId&quot;:0,&quot;projectStateColumnName&quot;:&quot;&quot;,&quot;projects&quot;:null,&quot;reportUserIcon&quot;:&quot;#02D3FB&quot;,&quot;reportUserId&quot;:&quot;55680&quot;,&quot;reportUserName&quot;:&quot;高光远&quot;,&quot;serialNum&quot;:0,&quot;sprintId&quot;:&quot;&quot;,&quot;sprintName&quot;:&quot;&quot;,&quot;startDate&quot;:null,&quot;stateId&quot;:&quot;0&quot;,&quot;stateName&quot;:&quot;未完成&quot;,&quot;subtaskCount&quot;:0,&quot;subtaskFinishCount&quot;:0,&quot;taskContent&quot;:&quot;&quot;,&quot;taskCreateTime&quot;:1501577479000,&quot;taskCreator&quot;:&quot;高光远&quot;,&quot;taskId&quot;:&quot;165143&quot;,&quot;taskName&quot;:&quot;子任务与主任务名称可输入文字长度不统一，建议统一，主任务只能输入几十个字，子任务可以输入200字&quot;,&quot;taskRepeat&quot;:null,&quot;taskType&quot;:0,&quot;timePoint&quot;:&quot;&quot;,&quot;timepointSurplus&quot;:&quot;&quot;,&quot;updateTime&quot;:1502034661000},&quot;taskDynamic&quot;:[{&quot;controlName&quot;:&quot;任务名称&quot;,&quot;controlType&quot;:&quot;修改&quot;,&quot;controlUserIcon&quot;:&quot;#02D3FB&quot;,&quot;controlUserId&quot;:55680,&quot;controlUserName&quot;:&quot;高光远&quot;,&quot;controlValue&quot;:&quot;子任务与主任务名称可输入文字长度不统一，建议统一，主任务只能输入几十个字，子任务可以输入200字&quot;,&quot;createTime&quot;:1501577552000,&quot;id&quot;:621162,&quot;notityType&quot;:0,&quot;projectId&quot;:0,&quot;projectName&quot;:&quot;&quot;,&quot;taskAssignerHeadicon&quot;:&quot;#FF6E23&quot;,&quot;taskAssignerId&quot;:55070,&quot;taskAssignerName&quot;:&quot;老鱼&quot;,&quot;taskAtProjectSerial&quot;:&quot;&quot;,&quot;taskId&quot;:&quot;165143&quot;,&quot;type&quot;:&quot;name&quot;},{&quot;controlName&quot;:&quot;执行者&quot;,&quot;controlType&quot;:&quot;修改&quot;,&quot;controlUserIcon&quot;:&quot;#02D3FB&quot;,&quot;controlUserId&quot;:55680,&quot;controlUserName&quot;:&quot;高光远&quot;,&quot;controlValue&quot;:&quot; 老鱼&quot;,&quot;createTime&quot;:1501577582000,&quot;id&quot;:621167,&quot;notityType&quot;:0,&quot;projectId&quot;:0,&quot;projectName&quot;:&quot;&quot;,&quot;taskAssignerHeadicon&quot;:&quot;#FF6E23&quot;,&quot;taskAssignerId&quot;:55070,&quot;taskAssignerName&quot;:&quot;老鱼&quot;,&quot;taskAtProjectSerial&quot;:&quot;&quot;,&quot;taskId&quot;:&quot;165143&quot;,&quot;type&quot;:&quot;assigner_id&quot;}],&quot;taskLinkList&quot;:null,&quot;taskParticiList&quot;:[{&quot;createTime&quot;:null,&quot;participanceId&quot;:60722,&quot;taskId&quot;:165143,&quot;userEmail&quot;:&quot;admin@durk.cn&quot;,&quot;userHeadicon&quot;:&quot;#FF6E23&quot;,&quot;userId&quot;:55070,&quot;userName&quot;:&quot;老鱼&quot;}],&quot;taskProjectInfo&quot;:[{&quot;atProjectSerial&quot;:&quot;1641&quot;,&quot;authoritys&quot;:{&quot;isall&quot;:1},&quot;customFields&quot;:[],&quot;isShowSprint&quot;:1,&quot;projectArchive&quot;:0,&quot;projectIcon&quot;:&quot;rgba(0, 0, 0, 0)&quot;,&quot;projectId&quot;:&quot;747&quot;,&quot;projectName&quot;:&quot;BUG管理&quot;,&quot;projectStateColumnColor&quot;:&quot;&quot;,&quot;projectStateColumnIcon&quot;:&quot;&quot;,&quot;projectStateColumnId&quot;:100,&quot;projectStateColumnName&quot;:&quot;高优先级&quot;,&quot;sprintId&quot;:&quot;14840&quot;,&quot;sprintName&quot;:&quot;上线后bug&quot;,&quot;stateId&quot;:0}],&quot;taskRepeat&quot;:null,&quot;taskSubList&quot;:[],&quot;taskTimeRemind&quot;:null,&quot;waitTasks&quot;:[]},&quot;errorCode&quot;:0,&quot;message&quot;:&quot;success&quot;,&quot;state&quot;:1}</stringProp>
+          </collectionProp>
+          <stringProp name="Assertion.test_field">Assertion.response_message</stringProp>
+          <boolProp name="Assertion.assume_success">false</boolProp>
+          <intProp name="Assertion.test_type">1</intProp>
+        </ResponseAssertion>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+    <WorkBench guiclass="WorkBenchGui" testclass="WorkBench" testname="工作台" enabled="true">
+      <boolProp name="WorkBench.save">true</boolProp>
+    </WorkBench>
+    <hashTree/>
+  </hashTree>
+</jmeterTestPlan>
