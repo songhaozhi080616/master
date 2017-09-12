@@ -40,7 +40,7 @@
 
     <target name="report">
 		<tstamp><format property="report.datestamp" pattern="yyyy/MM/dd HH:mm"/></tstamp>
-        <xslt classpathref="xslt.classpath" force="true" in="${jmeter.result.jtlName}" out="${jmeter.result.htmlName}" style="${jmeter.home}/extras/jmeter-results-report_zw.xsl" 
+        <xslt classpathref="xslt.classpath" force="true" in="${jmeter.result.jtlName}" out="${jmeter.result.htmlName}" style="${jmeter.home}/extras/jmeter.results.shanhe.me.xsl" 
 		>
 		 <param name="dateReport" expression="${report.datestamp}"/>
 		 </xslt>
